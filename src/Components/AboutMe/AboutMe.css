@@ -1,34 +1,21 @@
 .AboutMe {
     height: 70vh;
-    /* width: ; */
     color: #333333;
     font-weight: bolder;
     margin: auto;
-    display: flex;
-    flex-direction: column; /* Change flex-direction to column */
+    width: 70vw;
   }
   
   .AboutMe h2 {
-    margin-bottom: 1rem; /* Add margin to create space below the header */
-  }
-  
-  .ContentContainer {
-    display: flex;
-    flex-direction: row;
+    margin-bottom: 1rem;
   }
   
   .AboutMe img {
-    height: 30vh;
+    width: 30vw;
     margin-right: 2rem;
   }
   
-  .TextContainer {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .TextContainer > p {
+  .AboutMe > p {
     margin-bottom: 1rem;
   }
   
