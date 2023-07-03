@@ -3,31 +3,10 @@ import "./Home.css";
 import { useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 
-function Home(): JSX.Element {
-
-    const [greeting, setGreeting] = useState<string>("Hello")
-    useEffect(()=>{
-        let counter = 0;
-        const greetings = ["שלום", "Hello", "¡Hola!", "Hallo", "Ciao", "Olá", "Привет"];
-
-        const greetingInterval = setInterval(() => {
-            setGreeting(greetings[counter])
-            counter++
-            if (counter >= greetings.length) counter = 0
-        }, 2000)
-
-        return ()=> {
-            clearInterval(greetingInterval)
-        }
-
-    },[])
-
-    
+function Home(): JSX.Element { 
 
     return (
         <div className="Home">
-            
-            <h1 className="Greeting">{greeting}</h1>
             
             <div className="TextContainer">
 
@@ -43,7 +22,30 @@ function Home(): JSX.Element {
 
             </div>
             
-                
+                    <NavLink to="/about">
+                        <Button className="MenuButton topLeft">
+                            Who is Gershon Bookey?
+                        </Button>                    
+                    </NavLink>
+
+                    <NavLink to="/projects">
+                        <Button className="MenuButton topRight">
+                            What Can I Show For Myself?
+                        </Button>                    
+                    </NavLink>
+
+
+                    <NavLink to="/contact">
+                        <Button className="MenuButton bottomLeft">
+                            How Can You Contact Me?
+                        </Button>                    
+                    </NavLink>
+
+                    <NavLink to="/techs">
+                        <Button className="MenuButton bottomRight">
+                            What Do I Know?
+                        </Button>                    
+                    </NavLink>     
 
         </div>
     );
