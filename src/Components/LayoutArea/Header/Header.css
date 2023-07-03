@@ -1,7 +1,13 @@
 .Header {
     background-color: #ECEFF1 ;
     text-align: right;
-    padding: 25px;
+    height: 100px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 .Header .Logo {

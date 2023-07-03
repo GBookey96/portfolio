@@ -3,7 +3,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
 }
 
 .Home > .TextContainer {
@@ -40,4 +39,32 @@
 .bottomRight {
   bottom: 15vh;
   right: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .Home > .TextContainer {
+    position: static;
+    width: auto;
+    transform: none;
+  }
+
+  .MenuButton {
+    position: relative;
+    width: 80%;
+    margin: 10px auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .Home > .TextContainer {
+    width: 90vw;
+  }
+
+  .MenuButton {
+    width: 90%;
+  }
 }
