@@ -1,16 +1,18 @@
 .Home {
-    
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
 }
-  
-.Home > .GreetingContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 70vh;
-  }
-  
-.Home > .GreetingContainer > .Greeting {
-    text-align: center;
-    font-size: 10vh;
-  }
-  
+
+.Home > .Greeting {
+  text-align: center;
+  font-size: 5rem;
+}
+
+.Home > .TextContainer {
+  text-align: center;
+  margin-top: 2rem;
+  width: 70vw;
+}

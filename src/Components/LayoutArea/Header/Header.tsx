@@ -1,10 +1,14 @@
 import "./Header.css";
 import logo from "../../../Assets/logo.png"
+import { NavLink } from "react-router-dom";
 
 function Header(): JSX.Element {
     return (
         <div className="Header">
-			<img src={logo} alt="hi" className="Logo"/>
+			<NavLink to="/">
+                <img src={logo} alt="hi" className="Logo"/>
+            </NavLink>
+            
         </div>
     );
 }
