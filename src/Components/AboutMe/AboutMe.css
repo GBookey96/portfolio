@@ -1,0 +1,22 @@
+.AboutMe {
+    background-image: url("../../Assets/me.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 70vh; /* Set the height to 100% of the viewport height */
+    width: 100vw; /* Set the width to 100% of the viewport width */
+}
+
+.AboutMe > .WhoAmI {
+    position: fixed;
+    left: 10vh;
+    color: white;
+    font-weight: bolder;
+}
+
+.AboutMe > .LookingFor {
+    position: fixed;
+    right: 10vh;
+    color: white;
+    font-weight: bolder;
+}

@@ -1,0 +1,10 @@
+.Header {
+    background-color: #ECEFF1 ;
+    text-align: right;
+    padding: 25px;
+}
+
+.Header .Logo {
+	width: 200px;
+    margin-right: 100px;
+}
