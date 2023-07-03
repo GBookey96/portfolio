@@ -8,7 +8,7 @@ function Home(): JSX.Element {
     const [greeting, setGreeting] = useState<string>("Hello")
     useEffect(()=>{
         let counter = 0;
-        const greetings = ["שלום", "Hello", "¡Hola!", "Bonjour", "Hallo", "Ciao", "Olá", "Привет"];
+        const greetings = ["שלום", "Hello", "¡Hola!", "Hallo", "Ciao", "Olá", "Привет"];
 
         const greetingInterval = setInterval(() => {
             setGreeting(greetings[counter])
@@ -26,34 +26,7 @@ function Home(): JSX.Element {
 
     return (
         <div className="Home">
-
-
-            <NavLink to="/about">
-                <Button className="Button">
-                    Who is Gershon Bookey?
-                </Button>                    
-            </NavLink>
-
-
-            <NavLink to="/projects">
-                <Button className="Button">
-                    What Can I Show For Myself?
-                </Button>                    
-            </NavLink>
-
-
-            <NavLink to="/contact">
-                <Button className="Button">
-                    How Can You Contact Me?
-                </Button>                    
-            </NavLink>
-
-            <NavLink to="/techs">
-                <Button className="Button">
-                    What Do I Know?
-                </Button>                    
-            </NavLink>     
-			
+            
             <h1 className="Greeting">{greeting}</h1>
             
             <div className="TextContainer">

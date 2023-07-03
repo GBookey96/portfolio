@@ -23,11 +23,12 @@ h1 {
   color: #FF5722;
 }
 
-.Button {
+Button {
   border-radius: 5px;
   background-color: #263238;
   color: #F2F2F2;
   padding: 15px;
   font-size: 1em;
-  width: 300px
+  width: 15vw;
+  margin: 10px;
 }
