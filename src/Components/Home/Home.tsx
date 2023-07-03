@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import "./Home.css";
 import { useEffect, useState } from "react";
+import Button from "react-bootstrap/Button";
 
 function Home(): JSX.Element {
 
@@ -25,6 +26,33 @@ function Home(): JSX.Element {
 
     return (
         <div className="Home">
+
+
+            <NavLink to="/about">
+                <Button className="Button">
+                    Who is Gershon Bookey?
+                </Button>                    
+            </NavLink>
+
+
+            <NavLink to="/projects">
+                <Button className="Button">
+                    What Can I Show For Myself?
+                </Button>                    
+            </NavLink>
+
+
+            <NavLink to="/contact">
+                <Button className="Button">
+                    How Can You Contact Me?
+                </Button>                    
+            </NavLink>
+
+            <NavLink to="/techs">
+                <Button className="Button">
+                    What Do I Know?
+                </Button>                    
+            </NavLink>     
 			
             <h1 className="Greeting">{greeting}</h1>
             
@@ -42,11 +70,7 @@ function Home(): JSX.Element {
 
             </div>
             
-            <div>
-                <NavLink to="/about">
-                    Who is Gershon Bookey?
-                </NavLink>
-            </div>            
+                
 
         </div>
     );
