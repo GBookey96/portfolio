@@ -1,11 +1,19 @@
 import "./AboutMe.css";
 import me from "../../Assets/me.jpg"
+import { NavLink } from "react-router-dom";
+import Button from "react-bootstrap/esm/Button";
 
 function AboutMe(): JSX.Element {
 
     return (
         <div className="AboutMe">
             <h2>Who is Gershon Bookey?</h2>
+                            
+                    <NavLink to="/">
+                        <Button className="topLeft">
+                            Home
+                        </Button>                    
+                    </NavLink>
 
                 <img src={me} alt="" />
 

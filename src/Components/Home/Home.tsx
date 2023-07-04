@@ -8,27 +8,27 @@ function Home(): JSX.Element {
     return (
         <div className="Home">
             
-                <NavLink to="/about">
-                        <Button className="MenuButton topLeft">
+                    <NavLink to="/about">
+                        <Button className="topLeft">
                             Who is Gershon Bookey?
                         </Button>                    
                     </NavLink>
 
                     <NavLink to="/projects">
-                        <Button className="MenuButton topRight">
+                        <Button className="topRight">
                             What Can I Show For Myself?
                         </Button>                    
                     </NavLink>
 
 
                     <NavLink to="/contact">
-                        <Button className="MenuButton bottomLeft">
+                        <Button className="bottomLeft">
                             How Can You Contact Me?
                         </Button>                    
                     </NavLink>
 
                     <NavLink to="/techs">
-                        <Button className="MenuButton bottomRight">
+                        <Button className="bottomRight">
                             What Do I Know?
                         </Button>                    
                     </NavLink>                 
