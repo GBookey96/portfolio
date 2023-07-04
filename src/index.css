@@ -41,28 +41,25 @@ Button {
 }
 
 .topLeft {
-  top: 15vh;
+  top: 120px;
   left: 20px;
 }
 
 .topRight {
-  top: 15vh;
+  top: 120px;
   right: 20px;
 }
 
 .bottomLeft {
-  bottom: 15vh;
+  bottom: 70px;
   left: 20px;
 }
 
 .bottomRight {
-  bottom: 15vh;
+  bottom: 70px;
   right: 20px;
 }
 
-.EmptySection {
-  height: 120px;
-}
 
 @media screen and (max-width: 768px) {
   Button {
@@ -82,3 +79,6 @@ Button {
   }
 }
 
+a {
+  text-decoration: none;
+}

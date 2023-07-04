@@ -1,4 +1,7 @@
 import "./Technologies.css";
+import TechCards from "./TechCards/TechCards";
+import { NavLink } from "react-router-dom";
+import Button from "react-bootstrap/esm/Button";
 
 import htmlLogo from "../../Assets/techLogos/logo-html-5-256.png"
 import cssLogo from "../../Assets/techLogos/logo-css-3-256.png"
@@ -15,7 +18,6 @@ import jsLogo from "../../Assets/techLogos/javascript-256.png"
 import angularLogo from "../../Assets/techLogos/logo-angular-js-256.png"
 import expressLogo from "../../Assets/techLogos/express-256.png"
 
-import TechCards from "./TechCards/TechCards";
 
 
 function Technologies(): JSX.Element {
@@ -41,9 +43,14 @@ function Technologies(): JSX.Element {
     return (
         <div className="Technologies">
 			<h2>Technologies I know</h2>
-            <div className="CardContainer">
-                {techArray.map(t => <TechCards key={t.name} techName={t.name} techLogo={t.image} know={t.know}/>)}
-            </div>
+                <NavLink to="/">
+                    <Button className="topLeft">
+                        Home
+                    </Button>                    
+                </NavLink>
+                <div className="CardContainer">
+                    {techArray.map(t => <TechCards key={t.name} techName={t.name} techLogo={t.image} know={t.know}/>)}
+                </div>
             
         </div>
     );
