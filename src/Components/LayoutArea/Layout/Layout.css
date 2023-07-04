@@ -1,16 +1,7 @@
-/* .Layout {
-    height: 100%;
-    box-sizing: border-box;
-    display: grid;
-    grid-template-rows: 15% 80% 5%;
-    grid-template-columns: repeat(6, 1fr);
+.Layout > header {
+    height: 120px;
 }
 
-.Layout > header, .Layout > footer {
-    grid-column: span 6;
+.Layout > footer {
+    height: 70px;
 }
-
-.Layout > main {
-    grid-column: span 5;
-    overflow: auto;
-} */

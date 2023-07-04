@@ -60,6 +60,10 @@ Button {
   right: 20px;
 }
 
+.EmptySection {
+  height: 120px;
+}
+
 @media screen and (max-width: 768px) {
   Button {
     position: relative;

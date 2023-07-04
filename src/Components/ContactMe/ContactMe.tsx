@@ -2,16 +2,16 @@ import { NavLink } from "react-router-dom";
 import "./ContactMe.css";
 import Button from "react-bootstrap/esm/Button";
 import ContactCard from "./ContactCard/ContactCard";
-import waLogo from "../../Assets/waLogo.png"
-import liLogo from "../../Assets/liLogo.png"
-import phoneLogo from "../../Assets/phoneLogo.jpg"
-import emailLogo from "../../Assets/emailLogo.jpg"
-
+import waLogo from "../../Assets/contactLogos/waLogo.png"
+import liLogo from "../../Assets/contactLogos/liLogo.png"
+import phoneLogo from "../../Assets/contactLogos/phoneLogo.jpg"
+import emailLogo from "../../Assets/contactLogos/emailLogo.jpg"
+// import img from "../../Assets/techLogos/github-256.png"
 function ContactMe(): JSX.Element {
     return (
         <div className="ContactMe">
 			<h2>Contact Me</h2>
-                        
+        {/* <img src={img} alt="" /> */}
                 <NavLink to="/">
                     <Button className="topLeft">
                         Home

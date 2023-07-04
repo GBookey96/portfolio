@@ -26,7 +26,6 @@ function AboutMe(): JSX.Element {
                     <p>After our memorable time in Melbourne, my family and I made the decision to return to Jerusalem, a city that holds a special place in our hearts. We have set up our home here and continue to pursue our studies and personal growth, dedicating ourselves to exploring various intellectual and philosophical disciplines. Jerusalem's rich history and spiritual atmosphere provide the perfect backdrop for our intellectual and spiritual development.</p>
 
                     <p>As I now turn towards web development, something that has always pulled at my heart, I hope to be able to do amazing things with it. Web development has captivated my interest, and I'm excited to explore its endless possibilities. While embarking on this new journey, I strive to integrate my passion for technology with my love for Torah and its values, finding harmony between these two aspects of my life.</p>
-        <div className="EmptySection"></div>
         </div>
     );
 }
