@@ -7,6 +7,18 @@ function Weather(): JSX.Element {
     const [longitude, setLongitude] = useState<number>();
     const [weather, setWeather] = useState<number>();
     const [location, setLocation] = useState<string>()
+    const [time, setTime] = useState<string>()
+
+    
+    setInterval(()=>{
+        const now = new Date()
+        const hours = now.getHours()
+        const minutes = now.getMinutes()
+        let seconds = now.getSeconds().toString();
+        if(seconds.length === 1) seconds = "0" + seconds
+        const time = hours + ":" + minutes + ":" + seconds
+        setTime(time)
+    },1000)
 
     useEffect(() => {
     
@@ -43,12 +55,9 @@ function Weather(): JSX.Element {
         fetchWeatherAndLocation();
     }, [latitude, longitude]);
 
-    console.log(latitude)
-    console.log(longitude)
-
     return (
         <div className="Weather">
-            {weather && <p>Current temperature in {location}: {weather}°C</p>}
+            {weather && <strong>{location}: {time} - {weather}°C</strong>}
         </div>
     );
 }

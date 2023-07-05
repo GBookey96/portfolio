@@ -34,7 +34,7 @@ function Header(): JSX.Element {
 
         <div className="Header">
             <div className="LeftSection">
-                <span>{greeting}</span>
+                <strong>{greeting}</strong>
             </div>
             <div className="MiddleSection">
                 <Weather />

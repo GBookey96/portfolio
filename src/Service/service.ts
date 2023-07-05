@@ -8,7 +8,7 @@ class WeatherService {
     private googleAPIkey = "AIzaSyCSe7Ee4ilTv6prFIAvdHz0xA7ULiVeZyw"
 
     public async fetchWeatherData(lat: number, lon: number): Promise<number> {
-        const response = await axios.get(this.weatherbitAPI + "lat=" + lat + "&lon=" + lon + this.weatherbitAPIkey)
+        const response = await axios.get(`${this.weatherbitAPI}lat=${lat}&lon=${lon}${this.weatherbitAPIkey}`)
         const data = response.data
         const temperature = data.data[0].temp
         return temperature
