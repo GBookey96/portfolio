@@ -1,4 +1,4 @@
-import weatherService from "../../../../Service/weatherService";
+import service from "../../../../Service/service";
 import "./Weather.css";
 import { useEffect, useState } from 'react';
 
@@ -6,9 +6,10 @@ function Weather(): JSX.Element {
     const [latitude, setLatitude] = useState<number>();
     const [longitude, setLongitude] = useState<number>();
     const [weather, setWeather] = useState<number>();
+    const [location, setLocation] = useState<string>()
 
     useEffect(() => {
-        const getLocation = () => {
+    
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(
                     position => {
@@ -22,24 +23,24 @@ function Weather(): JSX.Element {
             } else {
                 console.error('Geolocation is not supported by this browser.');
             }
-        };
-
-        getLocation();
+    
     }, []);
 
     useEffect(() => {
-        const fetchWeather = async () => {
+        const fetchWeatherAndLocation = async () => {
             try {
                 if (latitude !== undefined && longitude !== undefined) {
-                    const temperature = await weatherService.fetchWeatherData(latitude, longitude);
+                    const temperature = await service.fetchWeatherData(latitude, longitude);
                     setWeather(temperature);
+                    const location = await service.getCityFromCoordinates(latitude, longitude);
+                    setLocation(location)
                 }
             } catch (error) {
                 console.error(error);
             }
         };
 
-        fetchWeather();
+        fetchWeatherAndLocation();
     }, [latitude, longitude]);
 
     console.log(latitude)
@@ -47,7 +48,7 @@ function Weather(): JSX.Element {
 
     return (
         <div className="Weather">
-            {weather && <p>Current temperature: {weather}°C</p>}
+            {weather && <p>Current temperature in {location}: {weather}°C</p>}
         </div>
     );
 }
