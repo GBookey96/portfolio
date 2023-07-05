@@ -27,7 +27,7 @@ h1 {
 Button {
   border-radius: 10px;
   background-color: #263238;
-  color: #F2F2F2;
+  color: #f2f2f2;
   padding: 15px;
   font-size: 1em;
   margin: 10px;
@@ -35,9 +35,10 @@ Button {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  position: fixed;
+  position: absolute;
   width: 300px;
   height: 40px;
+  z-index: 1;
 }
 
 .topLeft {
@@ -60,9 +61,8 @@ Button {
   right: 20px;
 }
 
-
-@media screen and (max-width: 768px) {
-  Button {
+@media screen and (max-height: 768px) {
+  .Button {
     position: relative;
     max-width: 80% !important;
     margin: 10px auto;
@@ -73,9 +73,9 @@ Button {
   }
 }
 
-@media screen and (max-width: 576px) {
-Button {
-    width: 90%;
+@media screen and (max-height: 576px) {
+  .Button {
+    min-width: 90%;
   }
 }
 
