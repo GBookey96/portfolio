@@ -1,26 +1,32 @@
 .ProjectsCards {
     margin: 10px;
     padding: 10px;
-    width: 350px;
-    height: 450px;
+    width: 300px;
     justify-content: center;
     background-color: transparent;
-}
-
-.ProjectsCards > img {
-    width: 300px;
     border-radius: 10px;
 }
 
-.ProjectsCards .LinkButton {
-    width: 150px;
-    height: 40px;
-    margin: 2px;
-    padding: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: aqua;
-    border: 1px solid;
-    border-radius: 5px;
+.ProjectsCards:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.ProjectsCards > img {
+    width: 280px;
+    border-radius: 10px;
+}
+
+.ProjectsCards .ProjectCardButton {
+    width: 280px;
+    position: relative;
+}
+
+.ProjectsCards .ReadMore {
+    width: 100px;
+    background-color: #263238;
+    margin: auto;
+    padding: 10px;
+    border-radius: 10px;
+    color: #F2F2F2;
+
 }
