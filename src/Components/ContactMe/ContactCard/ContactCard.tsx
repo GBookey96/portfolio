@@ -5,18 +5,29 @@ interface ContactCardProps {
     contactImg: string
     contactLink: string
     contactText: string
+    disabled?: boolean
 }
 
 function ContactCard(props: ContactCardProps): JSX.Element {
     
     return (
         <div className="ContactCard">
-                <img src={props.contactImg} alt="" className="ContactImg"/>
-            <a href={props.contactLink} target="_blank">
-                <Button className="ContactButton">
-                    {props.contactText}
+            <img src={props.contactImg} alt="" className="ContactImg"/>
+
+            {props.disabled && <>
+                <Button className="DisabledContactButton">
+                    <small>Try again between 10am and 5pm Israeli time...</small>
                 </Button>
-            </a>
+                
+            </>}
+            {!props.disabled && <>
+                <a href={props.contactLink} target="_blank">
+                    <Button className="ContactButton">
+                        {props.contactText}
+                    </Button>
+                </a>
+            </>}
+            
 
         </div>
     );

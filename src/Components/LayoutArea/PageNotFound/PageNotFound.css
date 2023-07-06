@@ -1,3 +1,20 @@
 .PageNotFound {
-	
+	width: 70vw;
+    margin: auto;
+}
+
+.PageNotFound ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.PageNotFound li {
+    margin-top: 10px;
+}
+
+.PageNotFound .Link404Page {
+    background-color: #263238;
+    color: #f2f2f2;
+    padding: 5px;
+    border-radius: 10px;
 }
